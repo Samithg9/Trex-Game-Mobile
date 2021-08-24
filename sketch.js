@@ -133,13 +133,13 @@ function draw() {
     text("Score: "+ score, width-75,50);
   score = score + Math.round(frameCount/60);
   
-  if(touches.length > 0||keyDown('Space')&& trex.y >= height-150) {
-    trex.velocityY = -7;
+  if(touches.length > 0||keyDown('Space')&& trex.y >= height-200) {
+    trex.velocityY = -10;
     jump.play(); 
     touches = []
   }
     
-  trex.velocityY = trex.velocityY+0.5;
+  trex.velocityY = trex.velocityY+0.8;
   
   if(score > 0 && score%300===0) {
     checkPoint.play();

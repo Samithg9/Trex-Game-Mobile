@@ -80,7 +80,7 @@ function setup() {
   
   trex = createSprite(50,height-70,20,50);
   trex.addAnimation('running', trex_running);
-  trex.scale = 0.5; 
+  trex.scale = 0.8; 
   trex.x = 50;
   
   ground = createSprite(width/2,height-40,width,20);
@@ -133,7 +133,7 @@ function draw() {
     text("Score: "+ score, width-75,50);
   score = score + Math.round(frameCount/60);
   
-  if(touches.length > 0||keyDown('Space')&& trex.y >= height-100) {
+  if(touches.length > 0||keyDown('Space')&& trex.y >= height-150) {
     trex.velocityY = -7;
     jump.play(); 
     touches = []
